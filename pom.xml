@@ -9,6 +9,7 @@
   <modules>
     <module>provider-payment</module>
     <module>consumer-order</module>
+    <module>api-common</module>
   </modules>
   <packaging>pom</packaging>
 
