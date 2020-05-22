@@ -5,12 +5,10 @@ server:
 spring:
   application:
     name:  cloud-order-service
-#  profiles:
-#    active: replica1
 
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/

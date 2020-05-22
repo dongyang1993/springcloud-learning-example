@@ -1,5 +1,5 @@
 server:
-  port: 7002
+  port: 7003
 
 spring:
   application:
@@ -7,10 +7,10 @@ spring:
 
 eureka:
   instance:
-    hostname: eureka2.com
+    hostname: eureka3.com
 #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka1.com:7001/eureka/,http://eureka3.com:7003/eureka/
+      defaultZone: http://eureka1.com:7001/eureka/,http://eureka2.com:7002/eureka/
