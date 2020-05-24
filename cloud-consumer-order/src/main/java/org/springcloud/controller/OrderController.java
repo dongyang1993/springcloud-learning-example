@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springcloud.entity.CommonResult;
 import org.springcloud.entity.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://127.0.0.1:8001";
+    public static final String PAYMENT_URL = "http://cloud-paymet-service";
 
     @Autowired
     private RestTemplate restTemplate;

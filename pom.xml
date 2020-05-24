@@ -7,10 +7,10 @@
   <artifactId>springcloud2020</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>provider-payment</module>
-    <module>consumer-order</module>
-    <module>api-common</module>
-    <module>eureka-server</module>
+    <module>cloud-provider-payment</module>
+    <module>cloud-consumer-order</module>
+    <module>cloud-api-common</module>
+    <module>cloud-eureka-server</module>
   </modules>
   <packaging>pom</packaging>
 
