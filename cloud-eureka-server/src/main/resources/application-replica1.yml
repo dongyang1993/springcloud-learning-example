@@ -8,7 +8,8 @@ spring:
 eureka:
   instance:
     hostname: eureka1.com #默认用的是hostName 不能用一样的，如果在同一台机器上，可以改host
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port} #
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
