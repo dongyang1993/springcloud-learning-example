@@ -12,3 +12,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka1.com:7001/eureka/,http://eureka2.com:7002/eureka/,http://eureka3.com:7003/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    prefer-ip-address: true
