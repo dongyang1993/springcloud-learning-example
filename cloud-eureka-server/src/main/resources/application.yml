@@ -1,6 +1,10 @@
 server:
   port: 7000
 
+spring:
+  application:
+    name: eureka-server # Eureka集群的applicationName必须一致，不然集群模式起不来
+
 eureka:
   instance:
 #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
