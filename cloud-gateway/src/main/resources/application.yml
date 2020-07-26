@@ -3,18 +3,27 @@ server:
 
 spring:
   application:
-    name: cloud-gateway
+    name: cloud-gateway-service
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
-        - id: payment_route
-          uri: http://127.0.0.1:8001
+        - uri: lb://cloud-paymet-service
           predicates:
             - Path=/payment/get/**
+            - After=2020-07-26T13:43:44.411505+08:00[Asia/Shanghai]
+            - Cookie=role, svip
+            - Method=GET
         - id: payment_route2
-          uri: http://127.0.0.1:8001
+          uri: lb://cloud-paymet-service
           predicates:
-            - Path=/payment/lb/**
+            - Path=/payment/create/**
+#        - id: guonei
+#          uri: http://news.baidu.com/
+#          predicates:
+#            - Path=/guonei
 
 eureka:
   client:

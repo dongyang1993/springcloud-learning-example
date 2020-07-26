@@ -29,8 +29,8 @@ public class PaymentController {
         }
     }
 
-    @GetMapping("/payment/get/{id}")
-    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
+    @GetMapping("/payment/get")
+    public CommonResult<Payment> getPaymentById(@RequestParam("id") Long id) {
         Payment payment = paymetService.getPaymentById(id);
         log.info("查询结果:{}", payment);
 
